@@ -1,0 +1,48 @@
+﻿<Window x:Class="Uana.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uana"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="157*" />
+            <RowDefinition Height="257*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*" />
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="13*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="2" Margin="1,21,27,185" Grid.Row="2">Numele viitorilor dependenti de pateu:</Label>
+
+
+        <StackPanel Grid.Row="1" Margin="9,10,1,-10" Grid.RowSpan="2" Grid.ColumnSpan="3">
+
+
+        </StackPanel>
+        <Button x:Name="btnAdd" Margin="0,212,216,0" Click="ButtonAddName_Click" Grid.Row="2" Grid.Column="2">Add Name</Button>
+        <TextBox x:Name="txtName" Margin="0,42,0,179" Grid.Row="2" Grid.Column="2" />
+
+        <ListBox x:Name="Proffesion" Background="White" BorderBrush="#FF0040FF" FontFamily="Comic Sans MS" Margin="0,83,212,56" Grid.Row="2" IsSynchronizedWithCurrentItem="True" AllowDrop="True" Grid.Column="2">
+            <ListBoxItem>Porcar</ListBoxItem>
+            <ListBoxItem>Degustator de pateu</ListBoxItem>
+            <ListBoxItem>Carnatar</ListBoxItem>
+            <ListBoxItem>Designer pt ambalaje</ListBoxItem>
+            <ListBoxItem>Porcul din pateu</ListBoxItem>
+        </ListBox>
+        <CheckBox Content="Le place pateul?" x:Name="cb" Margin="181,162,-26,56" Grid.Row="2" Grid.Column="2"/>
+        <DatePicker RenderTransformOrigin="0.53,0.585" Grid.Column="2" Margin="183,83,0,135" Grid.Row="2"/>
+        <Image HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="781" Source="/hiring software.png" Stretch="Fill" Grid.ColumnSpan="3" Grid.Row="1" Margin="-2,-15,0,0" Grid.RowSpan="2"/>
+        <ListBox Grid.Row="2" x:Name="lstNames" Margin="0,26,0,0" Grid.ColumnSpan="2" />
+        <Label  x:Name="eroare" Content="Seleceaza toate astea bosule!" Grid.Column="2" Margin="182,214,-2,1" Grid.Row="2"   Foreground="Red" Visibility="Hidden"/>
+
+    </Grid>
+
+</Window>
